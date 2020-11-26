@@ -23,11 +23,13 @@ Como esta API atenderá milhares de requisições simultâneas, ela precisa func
 Para Rodar o Redis em um container docker:
 
 > docker pull redis
+
 > docker run --name redis13 -p 6379:6379 -d redis redis-server --appendonly no
 
 No VSCode:
 
 > yarn install
+
 > yarn start
 
 Para testar a solução, usei 4 instancias do insomnia, lançando requisições a cada 0,1s
