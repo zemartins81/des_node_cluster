@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
             res.sendStatus(403)
         } else {
             client.set(id, JSON.stringify(req.body))
-            client.expire(id, 30)
+            client.expire(id, 10 * 60)
             console.log(JSON.stringify(req.body))
             res.send(`Transação aceita!`)
         }
